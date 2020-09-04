@@ -943,7 +943,7 @@ namespace p
 template<typename T>
 T TC_Common::strto(const string &sStr)
 {
-    using strto_type = typename std::conditional<std::is_arithmetic<T>::value, p::strto1<T>, p::strto2<T>>::type;
+    using strto_type = typename std::conditional< std::is_arithmetic<T>::value, p::strto1<T>, p::strto2<T> >::type;
 
     return strto_type()(sStr);
 }

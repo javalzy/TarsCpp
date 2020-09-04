@@ -32,7 +32,7 @@ namespace tars
 struct TC_AutoPtrNull_Exception : public TC_Exception
 {
     TC_AutoPtrNull_Exception(const string &buffer) : TC_Exception(buffer){};
-    ~TC_AutoPtrNull_Exception() {};
+    virtual ~TC_AutoPtrNull_Exception() throw() {};
 };
 
 /**
